@@ -1,0 +1,33 @@
+ALGORITHME RechercherNombreDansTableau
+
+VARIABLES
+    Tableau T(10) : Entier
+    n : Entier
+    i, c : Entier
+
+DEBUT
+
+    POUR i <-- 0 à 9 pas 1 FAIRE
+        ecrire("Entrez un entier pour la position ", i+1, " : ")
+        lire(T(i))
+    FIN POUR
+
+    ecrire("Entrez un entier à rechercher : ")
+    lire(n)
+
+    c <-- 0
+
+    POUR i <-- 0 à 9 pas 1 FAIRE
+        SI T(i) = n ALORS
+            c <-- c + 1
+            
+        FIN SI
+    FIN POUR
+
+    SI trouve > 0 ALORS
+        ecrire(n, " se trouve dans le tableau.")
+    SINON
+        ecrire(n, " ne se trouve pas dans le tableau.")
+    FIN SI
+
+FIN
